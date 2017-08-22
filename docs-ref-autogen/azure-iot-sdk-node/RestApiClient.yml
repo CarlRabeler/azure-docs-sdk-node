@@ -1,0 +1,128 @@
+### YamlMime:UniversalReference
+items:
+  - uid: 'module:azure-iothub.RestApiClient'
+    id: 'module:azure-iothub.RestApiClient'
+    name: RestApiClient
+    summary: >-
+      Constructs an <code><xref:RestApiClient></code> object that can be used to
+      make REST calls to the IoT Hub service.
+    fullName: RestApiClient
+    tags:
+      - originalTitle: params
+        title: params
+        text: >-
+          {Object}  config              The configuration object that should be
+          used to connect to the IoT Hub service.
+        value: >-
+          {Object}  config              The configuration object that should be
+          used to connect to the IoT Hub service.
+      - originalTitle: params
+        title: params
+        text: >-
+          {Object}  httpRequestBuilder  OPTIONAL: The base http transport
+          object. `azure-iot-common.Http` will be used if no argument is
+          provided.
+        value: >-
+          {Object}  httpRequestBuilder  OPTIONAL: The base http transport
+          object. `azure-iot-common.Http` will be used if no argument is
+          provided.
+    type: Class
+    children:
+      - 'module:azure-iothub.RestApiClient.#ctor'
+      - 'module:azure-iothub.RestApiClient.executeApiCall'
+      - 'module:azure-iothub.RestApiClient.updateSharedAccessSignature'
+      - 'module:azure-iothub.RestApiClient.translateError'
+    langs:
+      - js
+  - id: 'module:azure-iothub.RestApiClient.#ctor'
+    uid: 'module:azure-iothub.RestApiClient.#ctor'
+    parent: 'module:azure-iothub.RestApiClient'
+    name: RestApiClient()
+    fullName: RestApiClient.RestApiClient()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new RestApiClient()
+    langs:
+      - js
+  - uid: 'module:azure-iothub.RestApiClient.executeApiCall'
+    id: 'module:azure-iothub.RestApiClient.executeApiCall'
+    parent: 'module:azure-iothub.RestApiClient'
+    name: 'executeApiCall(method, path, headers, requestBody, timeout, done)'
+    summary: >-
+      Creates an HTTP request, sends it and parses the response, then call the
+      callback with the resulting object.
+    fullName: >-
+      module:azure-iothub.RestApiClient.executeApiCall(method, path, headers,
+      requestBody, timeout, done)
+    type: Function
+    syntax:
+      parameters:
+        - id: method
+          type:
+            - function
+          description: The HTTP method that should be used.
+        - id: path
+          type:
+            - function
+          description: The path for the HTTP request.
+        - id: headers
+          type:
+            - function
+          description: >-
+            Headers to add to the request on top of the defaults (Authorization,
+            Request-Id and User-Agent will be populated automatically).
+        - id: requestBody
+          type:
+            - function
+          description: Body of the HTTP request.
+        - id: timeout
+          type:
+            - function
+          description: '[optional] Custom timeout value.'
+        - id: done
+          type:
+            - function
+          description: Called when a response has been received or if an error happened.
+      content: >-
+        function executeApiCall(method, path, headers, requestBody, timeout,
+        done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.RestApiClient.updateSharedAccessSignature'
+    id: 'module:azure-iothub.RestApiClient.updateSharedAccessSignature'
+    parent: 'module:azure-iothub.RestApiClient'
+    name: updateSharedAccessSignature(sharedAccessSignature)
+    summary: Updates the shared access signature used to authentify API calls.
+    fullName: >-
+      module:azure-iothub.RestApiClient.updateSharedAccessSignature(sharedAccessSignature)
+    type: Function
+    syntax:
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: The new shared access signature that should be used.
+      content: function updateSharedAccessSignature(sharedAccessSignature)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.RestApiClient.translateError'
+    id: 'module:azure-iothub.RestApiClient.translateError'
+    parent: 'module:azure-iothub.RestApiClient'
+    name: 'translateError(body, response)'
+    summary: Translates an HTTP error into a transport-agnostic error.
+    fullName: 'module:azure-iothub.RestApiClient.translateError(body, response)'
+    type: Function
+    syntax:
+      parameters:
+        - id: body
+          type:
+            - string
+          description: The HTTP error response body.
+        - id: response
+          type:
+            - string
+          description: The HTTP response itself.
+      content: 'function translateError(body, response)'
+    langs:
+      - js

@@ -1,0 +1,152 @@
+### YamlMime:UniversalReference
+items:
+  - uid: 'module:azure-iothub.Amqp'
+    id: 'module:azure-iothub.Amqp'
+    name: Amqp
+    summary: "Constructs an <code><xref:Amqp></code> object that can be used in an application\r             to connect to IoT Hub instance, using the AMQP protocol."
+    fullName: Amqp
+    tags:
+      - originalTitle: params
+        title: params
+        text: >-
+          {Object}  config    The configuration object that should be used to
+          connect to the IoT Hub service.
+        value: >-
+          {Object}  config    The configuration object that should be used to
+          connect to the IoT Hub service.
+      - originalTitle: params
+        title: params
+        text: >-
+          {Object}  amqpBase  OPTIONAL: The Base AMQP transport object. Amqp
+          will use azure-iot-common.Amqp if no argument is provided.
+        value: >-
+          {Object}  amqpBase  OPTIONAL: The Base AMQP transport object. Amqp
+          will use azure-iot-common.Amqp if no argument is provided.
+    type: Class
+    children:
+      - 'module:azure-iothub.Amqp.#ctor'
+      - 'module:azure-iothub.Amqp#connect'
+      - 'module:azure-iothub.Amqp#disconnect'
+      - 'module:azure-iothub.Amqp#send'
+      - 'module:azure-iothub.Amqp#getReceiver'
+      - 'module:azure-iothub.Amqp#getFeedbackReceiver'
+      - 'module:azure-iothub.Amqp#getFileNotificationReceiver'
+    langs:
+      - js
+  - id: 'module:azure-iothub.Amqp.#ctor'
+    uid: 'module:azure-iothub.Amqp.#ctor'
+    parent: 'module:azure-iothub.Amqp'
+    name: Amqp()
+    fullName: Amqp.Amqp()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new Amqp()
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Amqp#connect'
+    id: 'module:azure-iothub.Amqp#connect'
+    parent: 'module:azure-iothub.Amqp'
+    name: connect(done)
+    summary: Establishes a connection with the IoT Hub instance.
+    fullName: 'module:azure-iothub.Amqp.connect(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: Called when the connection is established of if an error happened.
+      content: function connect(done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Amqp#disconnect'
+    id: 'module:azure-iothub.Amqp#disconnect'
+    parent: 'module:azure-iothub.Amqp'
+    name: disconnect(done)
+    summary: Disconnects the link to the IoT Hub instance.
+    fullName: 'module:azure-iothub.Amqp.disconnect(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: Called when disconnected of if an error happened.
+      content: function disconnect(done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Amqp#send'
+    id: 'module:azure-iothub.Amqp#send'
+    parent: 'module:azure-iothub.Amqp'
+    name: 'send(message, done)'
+    summary: Sends a message to the IoT Hub.
+    fullName: 'module:azure-iothub.Amqp.send(message, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: "The [<code>message</code>](xref:module%3Acommon%2Fmessage.Message)\r                             to be sent."
+        - id: done
+          type:
+            - function
+          description: "The callback to be invoked when `send`\r                             completes execution."
+      content: 'function send(message, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Amqp#getReceiver'
+    id: 'module:azure-iothub.Amqp#getReceiver'
+    parent: 'module:azure-iothub.Amqp'
+    name: getReceiver(done)
+    summary: >-
+      Gets the <code><xref:AmqpReceiver></code> object that can be used to
+      receive messages from the IoT Hub instance and accept/reject/release them.
+    fullName: 'module:azure-iothub.Amqp.getReceiver(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: 'Callback used to return the <code><xref:AmqpReceiver></code> object.'
+      content: function getReceiver(done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Amqp#getFeedbackReceiver'
+    id: 'module:azure-iothub.Amqp#getFeedbackReceiver'
+    parent: 'module:azure-iothub.Amqp'
+    name: getFeedbackReceiver(done)
+    summary: >-
+      Gets the <code><xref:AmqpReceiver></code> object that can be used to
+      receive messages from the IoT Hub instance and accept/reject/release them.
+    fullName: 'module:azure-iothub.Amqp.getFeedbackReceiver(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: 'Callback used to return the <code><xref:AmqpReceiver></code> object.'
+      content: function getFeedbackReceiver(done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Amqp#getFileNotificationReceiver'
+    id: 'module:azure-iothub.Amqp#getFileNotificationReceiver'
+    parent: 'module:azure-iothub.Amqp'
+    name: getFileNotificationReceiver(done)
+    summary: >-
+      Gets the <code><xref:AmqpReceiver></code> object that can be used to
+      receive messages from the IoT Hub instance and accept/reject/release them.
+    fullName: 'module:azure-iothub.Amqp.getFileNotificationReceiver(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: 'Callback used to return the <code><xref:AmqpReceiver></code> object.'
+      content: function getFileNotificationReceiver(done)
+    langs:
+      - js

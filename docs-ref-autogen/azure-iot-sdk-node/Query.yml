@@ -1,0 +1,78 @@
+### YamlMime:UniversalReference
+items:
+  - uid: 'module:azure-iothub.Query'
+    id: 'module:azure-iothub.Query'
+    name: Query
+    summary: >-
+      Constructs a Query object that provides APIs to trigger the execution of a
+      device query.
+    fullName: Query
+    type: Class
+    children:
+      - 'module:azure-iothub.Query.#ctor'
+      - 'module:azure-iothub.Query#next'
+      - 'module:azure-iothub.Query#nextAsTwin'
+    langs:
+      - js
+  - id: 'module:azure-iothub.Query.#ctor'
+    uid: 'module:azure-iothub.Query.#ctor'
+    parent: 'module:azure-iothub.Query'
+    name: 'Query(executeQueryFn, registry)'
+    fullName: 'Query.Query(executeQueryFn, registry)'
+    summary: ''
+    type: Constructor
+    syntax:
+      parameters:
+        - id: executeQueryFn
+          type:
+            - function
+          description: The function that should be called to get a new page.
+        - id: registry
+          type:
+            - Registry
+          description: >-
+            [optional] Registry client used to create Twin objects (used in
+            nextAsTwin()).
+      content: 'new Query(executeQueryFn, registry)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Query#next'
+    id: 'module:azure-iothub.Query#next'
+    parent: 'module:azure-iothub.Query'
+    name: 'next(continuationToken, done)'
+    summary: Gets the next page of results for this query.
+    fullName: 'module:azure-iothub.Query.next(continuationToken, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: continuationToken
+          type:
+            - string
+          description: Continuation Token used for paging through results (optional)
+        - id: done
+          type:
+            - function
+          description: "The callback that will be called with either an Error object or\r                                          the results of the query."
+      content: 'function next(continuationToken, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Query#nextAsTwin'
+    id: 'module:azure-iothub.Query#nextAsTwin'
+    parent: 'module:azure-iothub.Query'
+    name: 'nextAsTwin(continuationToken, done)'
+    summary: Gets the next page of results for this query and cast them as Twins.
+    fullName: 'module:azure-iothub.Query.nextAsTwin(continuationToken, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: continuationToken
+          type:
+            - string
+          description: Continuation Token used for paging through results (optional)
+        - id: done
+          type:
+            - function
+          description: "The callback that will be called with either an Error object or\r                                          the results of the query."
+      content: 'function nextAsTwin(continuationToken, done)'
+    langs:
+      - js

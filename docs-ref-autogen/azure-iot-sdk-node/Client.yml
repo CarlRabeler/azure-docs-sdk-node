@@ -1,0 +1,200 @@
+### YamlMime:UniversalReference
+items:
+  - uid: 'module:azure-iothub.Client'
+    id: 'module:azure-iothub.Client'
+    name: Client
+    summary: "Creates an IoT Hub service client. Normally, consumers will\r                 call one of the factory methods,\r                 [fromConnectionString](xref:module%3Aazure-iothub.Client.fromConnectionString) or\r                 [fromSharedAccessSignature](xref:module%3Aazure-iothub.Client.fromSharedAccessSignature),\r                 to create an IoT Hub service Client."
+    fullName: Client
+    type: Class
+    children:
+      - 'module:azure-iothub.Client.#ctor'
+      - 'module:azure-iothub.Client#open'
+      - 'module:azure-iothub.Client#close'
+      - 'module:azure-iothub.Client#send'
+      - 'module:azure-iothub.Client#invokeDeviceMethod'
+      - 'module:azure-iothub.Client#getFeedbackReceiver'
+      - 'module:azure-iothub.Client#getFileNotificationReceiver'
+      - 'module:azure-iothub.Client.fromConnectionString'
+      - 'module:azure-iothub.Client.fromSharedAccessSignature'
+    langs:
+      - js
+  - id: 'module:azure-iothub.Client.#ctor'
+    uid: 'module:azure-iothub.Client.#ctor'
+    parent: 'module:azure-iothub.Client'
+    name: Client(transport)
+    fullName: Client.Client(transport)
+    summary: ''
+    type: Constructor
+    syntax:
+      parameters:
+        - id: transport
+          type:
+            - Object
+          description: "An object that implements the interface\r                                  expected of a transport object, e.g.,\r                                  [Transport](xref:module%3Aazure-iothub~Transport)."
+      content: new Client(transport)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Client#open'
+    id: 'module:azure-iothub.Client#open'
+    parent: 'module:azure-iothub.Client'
+    name: open(done)
+    summary: Opens the connection to an IoT hub.
+    fullName: 'module:azure-iothub.Client.open(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                           complete. `done` will be passed an Error object\r                           argument, which will be null if the operation\r                           completed successfully."
+      content: function open(done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Client#close'
+    id: 'module:azure-iothub.Client#close'
+    parent: 'module:azure-iothub.Client'
+    name: close(done)
+    summary: Closes the connection to an IoT hub.
+    fullName: 'module:azure-iothub.Client.close(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                           complete. `done` will be passed an Error object\r                           argument, which will be null if the operation\r                           completed successfully."
+      content: function close(done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Client#send'
+    id: 'module:azure-iothub.Client#send'
+    parent: 'module:azure-iothub.Client'
+    name: 'send(deviceId, message, done)'
+    summary: Sends a message to a device.
+    fullName: 'module:azure-iothub.Client.send(deviceId, message, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: deviceId
+          type:
+            - String
+          description: The identifier of an existing device identity.
+        - id: message
+          description: "The body of the message to send to the device.\r                             If `message` is not of type\r                             [Message](xref:module%3Aazure-iot-common.Message),\r                             it will be converted."
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                             complete. `done` will be called with two\r                             arguments: an Error object (can be null) and a\r                             transport-specific response object useful for\r                             logging or debugging."
+      content: 'function send(deviceId, message, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Client#invokeDeviceMethod'
+    id: 'module:azure-iothub.Client#invokeDeviceMethod'
+    parent: 'module:azure-iothub.Client'
+    name: 'invokeDeviceMethod(deviceId, params, done)'
+    summary: Invokes a method on a particular device.
+    fullName: 'module:azure-iothub.Client.invokeDeviceMethod(deviceId, params, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: deviceId
+          type:
+            - String
+          description: The identifier of an existing device identity.
+        - id: params
+          type:
+            - Object
+          description: "An object describing the method and shall have the following properties:\r                                       - methodName          The name of the method that shall be invoked.\r                                       - payload             [optional] The payload to use for the method call.\r                                       - timeoutInSeconds    [optional] The number of seconds IoT Hub shall wait for the device\r                                                             to send a response before deeming the method execution a failure."
+        - id: done
+          type:
+            - function
+          description: The callback to call with the result of the method execution.
+      content: 'function invokeDeviceMethod(deviceId, params, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Client#getFeedbackReceiver'
+    id: 'module:azure-iothub.Client#getFeedbackReceiver'
+    parent: 'module:azure-iothub.Client'
+    name: getFeedbackReceiver(done)
+    summary: >-
+      Returns a AmqpReceiver object which emits events when new feedback
+      messages are received by the client.
+    fullName: 'module:azure-iothub.Client.getFeedbackReceiver(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                             complete. `done` will be called with two\r                             arguments: an Error object (can be null) and a\r                             AmqpReceiver object."
+      content: function getFeedbackReceiver(done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Client#getFileNotificationReceiver'
+    id: 'module:azure-iothub.Client#getFileNotificationReceiver'
+    parent: 'module:azure-iothub.Client'
+    name: getFileNotificationReceiver(done)
+    summary: >-
+      Returns a AmqpReceiver object which emits events when new file upload
+      notifications are received by the client.
+    fullName: 'module:azure-iothub.Client.getFileNotificationReceiver(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                             complete. `done` will be called with two\r                             arguments: an Error object (can be null) and a\r                             AmqpReceiver object."
+      content: function getFileNotificationReceiver(done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Client.fromConnectionString'
+    id: 'module:azure-iothub.Client.fromConnectionString'
+    parent: 'module:azure-iothub.Client'
+    name: 'fromConnectionString(connStr, Transport)'
+    summary: "Creates an IoT Hub service client from the given\r                   connection string using the default transport\r                   ([Transport](xref:module%3Aazure-iothub~Transport))."
+    fullName: 'module:azure-iothub.Client.fromConnectionString(connStr, Transport)'
+    type: Function
+    syntax:
+      parameters:
+        - id: connStr
+          type:
+            - String
+          description: "A connection string which encapsulates \"device\r                                 connect\" permissions on an IoT hub."
+        - id: Transport
+          type:
+            - function
+          description: A transport constructor.
+      return:
+        type:
+          - 'module:azure-iothub.Client'
+        description: ''
+      content: 'function fromConnectionString(connStr, Transport)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Client.fromSharedAccessSignature'
+    id: 'module:azure-iothub.Client.fromSharedAccessSignature'
+    parent: 'module:azure-iothub.Client'
+    name: 'fromSharedAccessSignature(sharedAccessSignature, Transport)'
+    summary: "Creates an IoT Hub service client from the given\r                   shared access signature using the default transport\r                   ([Transport](xref:module%3Aazure-iothub~Transport))."
+    fullName: >-
+      module:azure-iothub.Client.fromSharedAccessSignature(sharedAccessSignature,
+      Transport)
+    type: Function
+    syntax:
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - String
+          description: "A shared access signature which encapsulates\r                           \"service connect\" permissions on an IoT hub."
+        - id: Transport
+          type:
+            - function
+          description: A transport constructor.
+      return:
+        type:
+          - 'module:azure-iothub.Client'
+        description: ''
+      content: 'function fromSharedAccessSignature(sharedAccessSignature, Transport)'
+    langs:
+      - js

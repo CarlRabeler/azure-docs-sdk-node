@@ -1,0 +1,124 @@
+- uid: 'module:azure-iothub.Amqp'
+  name: Amqp
+  items:
+    - uid: 'module:azure-iothub.Amqp#connect'
+      name: connect
+    - uid: 'module:azure-iothub.Amqp#disconnect'
+      name: disconnect
+    - uid: 'module:azure-iothub.Amqp#send'
+      name: send
+    - uid: 'module:azure-iothub.Amqp#getReceiver'
+      name: getReceiver
+    - uid: 'module:azure-iothub.Amqp#getFeedbackReceiver'
+      name: getFeedbackReceiver
+    - uid: 'module:azure-iothub.Amqp#getFileNotificationReceiver'
+      name: getFileNotificationReceiver
+- uid: 'module:azure-iothub.AmqpWs'
+  name: AmqpWs
+- uid: 'module:azure-iothub.Client'
+  name: Client
+  items:
+    - uid: 'module:azure-iothub.Client#open'
+      name: open
+    - uid: 'module:azure-iothub.Client#close'
+      name: close
+    - uid: 'module:azure-iothub.Client#send'
+      name: send
+    - uid: 'module:azure-iothub.Client#invokeDeviceMethod'
+      name: invokeDeviceMethod
+    - uid: 'module:azure-iothub.Client#getFeedbackReceiver'
+      name: getFeedbackReceiver
+    - uid: 'module:azure-iothub.Client#getFileNotificationReceiver'
+      name: getFileNotificationReceiver
+    - uid: 'module:azure-iothub.Client.fromConnectionString'
+      name: fromConnectionString
+    - uid: 'module:azure-iothub.Client.fromSharedAccessSignature'
+      name: fromSharedAccessSignature
+- uid: 'module:azure-iothub.Device'
+  name: Device
+- uid: 'module:azure-iothub.DeviceMethod'
+  name: DeviceMethod
+  items:
+    - uid: 'module:azure-iothub.DeviceMethod.invokeOn'
+      name: invokeOn
+- uid: 'module:azure-iothub.JobClient'
+  name: JobClient
+  items:
+    - uid: 'module:azure-iothub.JobClient#getJob'
+      name: getJob
+    - uid: 'module:azure-iothub.JobClient#createQuery'
+      name: createQuery
+    - uid: 'module:azure-iothub.JobClient#cancelJob'
+      name: cancelJob
+    - uid: 'module:azure-iothub.JobClient#scheduleDeviceMethod'
+      name: scheduleDeviceMethod
+    - uid: 'module:azure-iothub.JobClient#scheduleTwinUpdate'
+      name: scheduleTwinUpdate
+    - uid: 'module:azure-iothub.JobClient.fromConnectionString'
+      name: fromConnectionString
+    - uid: 'module:azure-iothub.JobClient.fromSharedAccessSignature'
+      name: fromSharedAccessSignature
+- uid: 'module:azure-iothub.Query'
+  name: Query
+  items:
+    - uid: 'module:azure-iothub.Query#next'
+      name: next
+    - uid: 'module:azure-iothub.Query#nextAsTwin'
+      name: nextAsTwin
+- uid: 'module:azure-iothub.Registry'
+  name: Registry
+  items:
+    - uid: 'module:azure-iothub.Registry#create'
+      name: create
+    - uid: 'module:azure-iothub.Registry#update'
+      name: update
+    - uid: 'module:azure-iothub.Registry#get'
+      name: get
+    - uid: 'module:azure-iothub.Registry#list'
+      name: list
+    - uid: 'module:azure-iothub.Registry#delete'
+      name: delete
+    - uid: 'module:azure-iothub.Registry#addDevices'
+      name: addDevices
+    - uid: 'module:azure-iothub.Registry#updateDevices'
+      name: updateDevices
+    - uid: 'module:azure-iothub.Registry#removeDevices'
+      name: removeDevices
+    - uid: 'module:azure-iothub.Registry#importDevicesFromBlob'
+      name: importDevicesFromBlob
+    - uid: 'module:azure-iothub.Registry#exportDevicesToBlob'
+      name: exportDevicesToBlob
+    - uid: 'module:azure-iothub.Registry#listJobs'
+      name: listJobs
+    - uid: 'module:azure-iothub.Registry#getJob'
+      name: getJob
+    - uid: 'module:azure-iothub.Registry#cancelJob'
+      name: cancelJob
+    - uid: 'module:azure-iothub.Registry#getTwin'
+      name: getTwin
+    - uid: 'module:azure-iothub.Registry#updateTwin'
+      name: updateTwin
+    - uid: 'module:azure-iothub.Registry#createQuery'
+      name: createQuery
+    - uid: 'module:azure-iothub.Registry#getRegistryStatistics'
+      name: getRegistryStatistics
+    - uid: 'module:azure-iothub.Registry.fromConnectionString'
+      name: fromConnectionString
+    - uid: 'module:azure-iothub.Registry.fromSharedAccessSignature'
+      name: fromSharedAccessSignature
+- uid: 'module:azure-iothub.RestApiClient'
+  name: RestApiClient
+  items:
+    - uid: 'module:azure-iothub.RestApiClient.executeApiCall'
+      name: executeApiCall
+    - uid: 'module:azure-iothub.RestApiClient.updateSharedAccessSignature'
+      name: updateSharedAccessSignature
+    - uid: 'module:azure-iothub.RestApiClient.translateError'
+      name: translateError
+- uid: 'module:azure-iothub.Twin'
+  name: Twin
+  items:
+    - uid: 'module:azure-iothub.Twin.get'
+      name: get
+    - uid: 'module:azure-iothub.Twin.update'
+      name: update

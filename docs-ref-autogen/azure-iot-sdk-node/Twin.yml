@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: 'module:azure-iothub.Twin'
+    id: 'module:azure-iothub.Twin'
+    name: Twin
+    summary: "Constructs a Twin object that provides APIs to update\r                        parts of the twin of a device in the IoT Hub service."
+    fullName: Twin
+    type: Class
+    children:
+      - 'module:azure-iothub.Twin.#ctor'
+      - 'module:azure-iothub.Twin.get'
+      - 'module:azure-iothub.Twin.update'
+    langs:
+      - js
+  - id: 'module:azure-iothub.Twin.#ctor'
+    uid: 'module:azure-iothub.Twin.#ctor'
+    parent: 'module:azure-iothub.Twin'
+    name: 'Twin(device, registryClient)'
+    fullName: 'Twin.Twin(device, registryClient)'
+    summary: ''
+    type: Constructor
+    syntax:
+      parameters:
+        - id: device
+          type:
+            - string
+            - Object
+          description: "A device identifier string or an object describing the device. If an Object,\r                                    it must contain a deviceId property."
+        - id: registryClient
+          type:
+            - Registry
+          description: The HTTP registry client used to execute REST API calls.
+      content: 'new Twin(device, registryClient)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Twin.get'
+    id: 'module:azure-iothub.Twin.get'
+    parent: 'module:azure-iothub.Twin'
+    name: get(done)
+    summary: Gets the latest version of this device twin from the IoT Hub service.
+    fullName: 'module:azure-iothub.Twin.get(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                               complete. `done` will be called with three\r                               arguments: an Error object (can be null), a\r                               [Twin](xref:module%3Aazure-iothub.Twin)\r                               object representing the created device\r                               identity, and a transport-specific response\r                               object useful for logging or debugging."
+      content: function get(done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Twin.update'
+    id: 'module:azure-iothub.Twin.update'
+    parent: 'module:azure-iothub.Twin'
+    name: 'update(patch, done)'
+    summary: Update the device twin with the patch provided as argument.
+    fullName: 'module:azure-iothub.Twin.update(patch, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: patch
+          type:
+            - Object
+          description: Object containing the new values to apply to this device twin.
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                               complete. `done` will be called with three\r                               arguments: an Error object (can be null), a\r                               [Twin](xref:module%3Aazure-iothub.Twin)\r                               object representing the created device\r                               identity, and a transport-specific response\r                               object useful for logging or debugging."
+      content: 'function update(patch, done)'
+    langs:
+      - js

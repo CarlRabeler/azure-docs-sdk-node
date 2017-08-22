@@ -1,0 +1,55 @@
+### YamlMime:UniversalReference
+items:
+  - uid: 'module:azure-iothub.DeviceMethod'
+    id: 'module:azure-iothub.DeviceMethod'
+    name: DeviceMethod
+    summary: >-
+      Constructs a DeviceMethod object that provides APIs to trigger the
+      execution of a device method.
+    fullName: DeviceMethod
+    type: Class
+    children:
+      - 'module:azure-iothub.DeviceMethod.#ctor'
+      - 'module:azure-iothub.DeviceMethod.invokeOn'
+    langs:
+      - js
+  - id: 'module:azure-iothub.DeviceMethod.#ctor'
+    uid: 'module:azure-iothub.DeviceMethod.#ctor'
+    parent: 'module:azure-iothub.DeviceMethod'
+    name: 'DeviceMethod(params, restApiClient)'
+    fullName: 'DeviceMethod.DeviceMethod(params, restApiClient)'
+    summary: ''
+    type: Constructor
+    syntax:
+      parameters:
+        - id: params
+          type:
+            - Object
+          description: "An object describing the method and shall have the following properties:\r                                            - methodName          The name of the method that shall be invoked.\r                                            - payload             [optional] The payload to use for the method call.\r                                            - timeoutInSeconds    [optional] The number of seconds IoT Hub shall wait for the device\r                                                                  to send a response before deeming the method execution a failure."
+        - id: restApiClient
+          type:
+            - RestApiClient
+          description: The REST client used to execute API calls.
+      content: 'new DeviceMethod(params, restApiClient)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.DeviceMethod.invokeOn'
+    id: 'module:azure-iothub.DeviceMethod.invokeOn'
+    parent: 'module:azure-iothub.DeviceMethod'
+    name: 'invokeOn(deviceId, done)'
+    summary: Invokes the method on the specified device with the specified payload.
+    fullName: 'module:azure-iothub.DeviceMethod.invokeOn(deviceId, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: deviceId
+          type:
+            - String
+          description: Identifier of the device on which the method will run.
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                               complete. `done` will be called with three\r                               arguments: an Error object (can be null), a\r                               [Twin](xref:module%3Aazure-iothub.Twin)\r                               object representing the created device\r                               identity, and a transport-specific response\r                               object useful for logging or debugging."
+      content: 'function invokeOn(deviceId, done)'
+    langs:
+      - js

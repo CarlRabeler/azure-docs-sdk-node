@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+items:
+  - uid: 'module:azure-iothub.Device'
+    id: 'module:azure-iothub.Device'
+    name: Device
+    summary: "Creates a representation of a device for use in the\r                 identity <xref:module%3Aazure-iothub.Registry> APIs."
+    fullName: Device
+    type: Class
+    children:
+      - 'module:azure-iothub.Device.#ctor'
+    langs:
+      - js
+  - id: 'module:azure-iothub.Device.#ctor'
+    uid: 'module:azure-iothub.Device.#ctor'
+    parent: 'module:azure-iothub.Device'
+    name: Device(jsonData)
+    fullName: Device.Device(jsonData)
+    summary: ''
+    type: Constructor
+    syntax:
+      parameters:
+        - id: jsonData
+          type:
+            - String
+          description: "An optional JSON representation of the\r                                 device, which will be mapped to properties\r                                 in the object. If no argument is provided,\r                                 Device roperties will be assigned default\r                                 values."
+      content: new Device(jsonData)
+    langs:
+      - js

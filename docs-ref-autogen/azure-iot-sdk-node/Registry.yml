@@ -1,0 +1,461 @@
+### YamlMime:UniversalReference
+items:
+  - uid: 'module:azure-iothub.Registry'
+    id: 'module:azure-iothub.Registry'
+    name: Registry
+    summary: "Constructs a Registry object with the given configuration\r                 object. The Registry class provides access to the IoT Hub\r                 identity service. Normally, consumers will call one of the\r                 factory methods, e.g.,\r                 [fromSharedAccessSignature](xref:module%3Aazure-iothub.Registry.fromConnectionString),\r                 to create a Registry object."
+    fullName: Registry
+    type: Class
+    children:
+      - 'module:azure-iothub.Registry.#ctor'
+      - 'module:azure-iothub.Registry#create'
+      - 'module:azure-iothub.Registry#update'
+      - 'module:azure-iothub.Registry#get'
+      - 'module:azure-iothub.Registry#list'
+      - 'module:azure-iothub.Registry#delete'
+      - 'module:azure-iothub.Registry#addDevices'
+      - 'module:azure-iothub.Registry#updateDevices'
+      - 'module:azure-iothub.Registry#removeDevices'
+      - 'module:azure-iothub.Registry#importDevicesFromBlob'
+      - 'module:azure-iothub.Registry#exportDevicesToBlob'
+      - 'module:azure-iothub.Registry#listJobs'
+      - 'module:azure-iothub.Registry#getJob'
+      - 'module:azure-iothub.Registry#cancelJob'
+      - 'module:azure-iothub.Registry#getTwin'
+      - 'module:azure-iothub.Registry#updateTwin'
+      - 'module:azure-iothub.Registry#createQuery'
+      - 'module:azure-iothub.Registry#getRegistryStatistics'
+      - 'module:azure-iothub.Registry.fromConnectionString'
+      - 'module:azure-iothub.Registry.fromSharedAccessSignature'
+    langs:
+      - js
+  - id: 'module:azure-iothub.Registry.#ctor'
+    uid: 'module:azure-iothub.Registry.#ctor'
+    parent: 'module:azure-iothub.Registry'
+    name: Registry(config)
+    fullName: Registry.Registry(config)
+    summary: ''
+    type: Constructor
+    syntax:
+      parameters:
+        - id: config
+          type:
+            - Object
+          description: "An object containing the necessary information to connect to the IoT Hub instance:\r                             - host: the hostname for the IoT Hub instance\r                             - sharedAccessSignature: A shared access signature with valid access rights and expiry."
+      content: new Registry(config)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#create'
+    id: 'module:azure-iothub.Registry#create'
+    parent: 'module:azure-iothub.Registry'
+    name: 'create(deviceInfo, done)'
+    summary: Creates a new device identity on an IoT hub.
+    fullName: 'module:azure-iothub.Registry.create(deviceInfo, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: deviceInfo
+          type:
+            - Object
+          description: "The object must include a `deviceId` property\r                               with a valid device identifier."
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                               complete. `done` will be called with three\r                               arguments: an Error object (can be null), a\r                               [Device](xref:module%3Aazure-iothub.Device)\r                               object representing the created device\r                               identity, and a transport-specific response\r                               object useful for logging or debugging."
+      content: 'function create(deviceInfo, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#update'
+    id: 'module:azure-iothub.Registry#update'
+    parent: 'module:azure-iothub.Registry'
+    name: 'update(deviceInfo, done)'
+    summary: "Updates an existing device identity on an IoT hub with\r                   the given device information."
+    fullName: 'module:azure-iothub.Registry.update(deviceInfo, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: deviceInfo
+          type:
+            - Object
+          description: "An object which must include a `deviceId`\r                               property whose value is a valid device\r                               identifier."
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                               complete. `done` will be called with three\r                               arguments: an Error object (can be null), a\r                               [Device](xref:module%3Aazure-iothub.Device)\r                               object representing the updated device\r                               identity, and a transport-specific response\r                               object useful for logging or debugging."
+      content: 'function update(deviceInfo, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#get'
+    id: 'module:azure-iothub.Registry#get'
+    parent: 'module:azure-iothub.Registry'
+    name: 'get(deviceId, done)'
+    summary: "Requests information about an existing device identity\r                   on an IoT hub."
+    fullName: 'module:azure-iothub.Registry.get(deviceId, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: deviceId
+          type:
+            - String
+          description: The identifier of an existing device identity.
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                               complete. `done` will be called with three\r                               arguments: an Error object (can be null), a\r                               [Device](xref:module%3Aazure-iothub.Device)\r                               object representing the created device\r                               identity, and a transport-specific response\r                               object useful for logging or debugging."
+      content: 'function get(deviceId, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#list'
+    id: 'module:azure-iothub.Registry#list'
+    parent: 'module:azure-iothub.Registry'
+    name: list(done)
+    summary: "Requests information about the first 1000 device\r                   identities on an IoT hub."
+    fullName: 'module:azure-iothub.Registry.list(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                               complete. `done` will be called with three\r                               arguments: an Error object (can be null), an\r                               array of\r                               [Device](xref:module%3Aazure-iothub.Device)\r                               objects representing the listed device\r                               identities, and a transport-specific response\r                               object useful for logging or debugging."
+      content: function list(done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#delete'
+    id: 'module:azure-iothub.Registry#delete'
+    parent: 'module:azure-iothub.Registry'
+    name: 'delete(deviceId, done)'
+    summary: Removes an existing device identity from an IoT hub.
+    fullName: 'module:azure-iothub.Registry.delete(deviceId, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: deviceId
+          type:
+            - String
+          description: The identifier of an existing device identity.
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                               complete. `done` will be called with three\r                               arguments: an Error object (can be null), an\r                               always-null argument (for consistency with\r                               the other methods), and a transport-specific\r                               response object useful for logging or\r                               debugging."
+      content: 'function delete(deviceId, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#addDevices'
+    id: 'module:azure-iothub.Registry#addDevices'
+    parent: 'module:azure-iothub.Registry'
+    name: 'addDevices(devices, done)'
+    summary: Adds an array of devices.
+    fullName: 'module:azure-iothub.Registry.addDevices(devices, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: devices
+          type:
+            - Object
+          description: "An array of objects which must include a `deviceId`\r                               property whose value is a valid device\r                               identifier."
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                               complete. `done` will be called with three\r                               arguments: an Error object (can be null), a\r                               BulkRegistryOperationResult\r                               and a transport-specific response object useful\r                               for logging or debugging."
+      content: 'function addDevices(devices, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#updateDevices'
+    id: 'module:azure-iothub.Registry#updateDevices'
+    parent: 'module:azure-iothub.Registry'
+    name: 'updateDevices(devices, forceUpdate, done)'
+    summary: Updates an array of devices.
+    fullName: 'module:azure-iothub.Registry.updateDevices(devices, forceUpdate, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: devices
+          type:
+            - Object
+          description: "An array of objects which must include a `deviceId`\r                               property whose value is a valid device\r                               identifier."
+        - id: forceUpdate
+          type:
+            - boolean
+          description: "if `forceUpdate` is true then the device will be\r                               updated regardless of an etag.  Otherwise the etags\r                               must match."
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                               complete. `done` will be called with three\r                               arguments: an Error object (can be null), a\r                               BulkRegistryOperationResult\r                               and a transport-specific response object useful\r                               for logging or debugging."
+      content: 'function updateDevices(devices, forceUpdate, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#removeDevices'
+    id: 'module:azure-iothub.Registry#removeDevices'
+    parent: 'module:azure-iothub.Registry'
+    name: 'removeDevices(devices, forceRemove, done)'
+    summary: Updates an array of devices.
+    fullName: 'module:azure-iothub.Registry.removeDevices(devices, forceRemove, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: devices
+          type:
+            - Object
+          description: "An array of objects which must include a `deviceId`\r                               property whose value is a valid device\r                               identifier."
+        - id: forceRemove
+          type:
+            - boolean
+          description: "if `forceRemove` is true then the device will be\r                               removed regardless of an etag.  Otherwise the etags\r                               must match."
+        - id: done
+          type:
+            - function
+          description: "The function to call when the operation is\r                               complete. `done` will be called with three\r                               arguments: an Error object (can be null), a\r                               BulkRegistryOperationResult\r                               and a transport-specific response object useful\r                               for logging or debugging."
+      content: 'function removeDevices(devices, forceRemove, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#importDevicesFromBlob'
+    id: 'module:azure-iothub.Registry#importDevicesFromBlob'
+    parent: 'module:azure-iothub.Registry'
+    name: 'importDevicesFromBlob(inputBlobContainerUri, outputBlobContainerUri, done)'
+    summary: Imports devices from a blob in bulk job.
+    fullName: >-
+      module:azure-iothub.Registry.importDevicesFromBlob(inputBlobContainerUri,
+      outputBlobContainerUri, done)
+    type: Function
+    syntax:
+      parameters:
+        - id: inputBlobContainerUri
+          type:
+            - String
+          description: >-
+            The URI to a container with a blob named 'devices.txt' containing a
+            list of devices to import.
+        - id: outputBlobContainerUri
+          type:
+            - String
+          description: >-
+            The URI to a container where a blob will be created with logs of the
+            import process.
+        - id: done
+          type:
+            - function
+          description: "The function to call when the job has been created, with two arguments: an error object if an\r                                             an error happened, (null otherwise) and the job status that can be used to track progress of the devices import."
+      content: >-
+        function importDevicesFromBlob(inputBlobContainerUri,
+        outputBlobContainerUri, done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#exportDevicesToBlob'
+    id: 'module:azure-iothub.Registry#exportDevicesToBlob'
+    parent: 'module:azure-iothub.Registry'
+    name: 'exportDevicesToBlob(outputBlobContainerUri, excludeKeys, done)'
+    summary: Export devices to a blob in a bulk job.
+    fullName: >-
+      module:azure-iothub.Registry.exportDevicesToBlob(outputBlobContainerUri,
+      excludeKeys, done)
+    type: Function
+    syntax:
+      parameters:
+        - id: outputBlobContainerUri
+          type:
+            - String
+          description: >-
+            The URI to a container where a blob will be created with logs of the
+            export process.
+        - id: excludeKeys
+          type:
+            - Boolean
+          description: >-
+            Boolean indicating whether security keys should be excluded from the
+            exported data.
+        - id: done
+          type:
+            - function
+          description: "The function to call when the job has been created, with two arguments: an error object if an\r                                             an error happened, (null otherwise) and the job status that can be used to track progress of the devices export."
+      content: 'function exportDevicesToBlob(outputBlobContainerUri, excludeKeys, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#listJobs'
+    id: 'module:azure-iothub.Registry#listJobs'
+    parent: 'module:azure-iothub.Registry'
+    name: listJobs(done)
+    summary: 'List the last import/export jobs (including the active one, if any).'
+    fullName: 'module:azure-iothub.Registry.listJobs(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: "The function to call with two arguments: an error object if an error happened,\r                             (null otherwise) and the list of past jobs as an argument."
+      content: function listJobs(done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#getJob'
+    id: 'module:azure-iothub.Registry#getJob'
+    parent: 'module:azure-iothub.Registry'
+    name: 'getJob(jobId, done)'
+    summary: Get the status of a bulk import/export job.
+    fullName: 'module:azure-iothub.Registry.getJob(jobId, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: jobId
+          type:
+            - String
+          description: >-
+            The identifier of the job for which the user wants to get status
+            information.
+        - id: done
+          type:
+            - function
+          description: "The function to call with two arguments: an error object if an error happened,\r                             (null otherwise) and the status of the job whose identifier was passed as an argument."
+      content: 'function getJob(jobId, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#cancelJob'
+    id: 'module:azure-iothub.Registry#cancelJob'
+    parent: 'module:azure-iothub.Registry'
+    name: 'cancelJob(jobId, done)'
+    summary: Cancel a bulk import/export job.
+    fullName: 'module:azure-iothub.Registry.cancelJob(jobId, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: jobId
+          type:
+            - String
+          description: >-
+            The identifier of the job for which the user wants to get status
+            information.
+        - id: done
+          type:
+            - function
+          description: "The function to call with two arguments: an error object if an error happened,\r                             (null otherwise) and the (cancelled) status of the job whose identifier was passed as an argument."
+      content: 'function cancelJob(jobId, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#getTwin'
+    id: 'module:azure-iothub.Registry#getTwin'
+    parent: 'module:azure-iothub.Registry'
+    name: 'getTwin(deviceId, done)'
+    summary: Gets the Device Twin of the device with the specified device identifier.
+    fullName: 'module:azure-iothub.Registry.getTwin(deviceId, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: deviceId
+          type:
+            - String
+          description: The device identifier.
+        - id: done
+          type:
+            - function
+          description: "The callback that will be called with either an Error object or\r                                the device twin instance."
+      content: 'function getTwin(deviceId, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#updateTwin'
+    id: 'module:azure-iothub.Registry#updateTwin'
+    parent: 'module:azure-iothub.Registry'
+    name: 'updateTwin(deviceId, patch, etag, done)'
+    summary: Updates the Device Twin of a specific device with the given patch.
+    fullName: 'module:azure-iothub.Registry.updateTwin(deviceId, patch, etag, done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: deviceId
+          type:
+            - String
+          description: The device identifier.
+        - id: patch
+          type:
+            - Object
+          description: The desired properties and tags to patch the device twin with.
+        - id: etag
+          type:
+            - string
+          description: "The latest etag for this device twin or '*' to force an update even if\r                                the device twin has been updated since the etag was obtained."
+        - id: done
+          type:
+            - function
+          description: "The callback that will be called with either an Error object or\r                                the device twin instance."
+      content: 'function updateTwin(deviceId, patch, etag, done)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#createQuery'
+    id: 'module:azure-iothub.Registry#createQuery'
+    parent: 'module:azure-iothub.Registry'
+    name: 'createQuery(sqlQuery, pageSize)'
+    summary: >-
+      Creates a query that can be run on the IoT Hub instance to find
+      information about devices or jobs.
+    fullName: 'module:azure-iothub.Registry.createQuery(sqlQuery, pageSize)'
+    type: Function
+    syntax:
+      parameters:
+        - id: sqlQuery
+          type:
+            - String
+          description: The query written as an SQL string.
+        - id: pageSize
+          type:
+            - Number
+          description: >-
+            The desired number of results per page (optional. default: 1000,
+            max: 10000).
+      content: 'function createQuery(sqlQuery, pageSize)'
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry#getRegistryStatistics'
+    id: 'module:azure-iothub.Registry#getRegistryStatistics'
+    parent: 'module:azure-iothub.Registry'
+    name: getRegistryStatistics(done)
+    summary: Gets statistics about the devices in the device identity registry.
+    fullName: 'module:azure-iothub.Registry.getRegistryStatistics(done)'
+    type: Function
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: "The callback that will be called with either an Error object or\r                              the device registry statistics."
+      content: function getRegistryStatistics(done)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry.fromConnectionString'
+    id: 'module:azure-iothub.Registry.fromConnectionString'
+    parent: 'module:azure-iothub.Registry'
+    name: fromConnectionString(value)
+    summary: "Constructs a Registry object from the given connection\r                 string using the default transport\r                 ([Http](xref:module%3Aazure-iothub.Http))."
+    fullName: 'module:azure-iothub.Registry.fromConnectionString(value)'
+    type: Function
+    syntax:
+      parameters:
+        - id: value
+          type:
+            - String
+          description: "A connection string which encapsulates the\r                             appropriate (read and/or write) Registry\r                             permissions."
+      return:
+        type:
+          - 'module:azure-iothub.Registry'
+        description: ''
+      content: function fromConnectionString(value)
+    langs:
+      - js
+  - uid: 'module:azure-iothub.Registry.fromSharedAccessSignature'
+    id: 'module:azure-iothub.Registry.fromSharedAccessSignature'
+    parent: 'module:azure-iothub.Registry'
+    name: fromSharedAccessSignature(value)
+    summary: "Constructs a Registry object from the given shared access\r                   signature using the default transport\r                   ([Http](xref:module%3Aazure-iothub.Http))."
+    fullName: 'module:azure-iothub.Registry.fromSharedAccessSignature(value)'
+    type: Function
+    syntax:
+      parameters:
+        - id: value
+          type:
+            - String
+          description: "A shared access signature which encapsulates\r                             the appropriate (read and/or write) Registry\r                             permissions."
+      return:
+        type:
+          - 'module:azure-iothub.Registry'
+        description: ''
+      content: function fromSharedAccessSignature(value)
+    langs:
+      - js

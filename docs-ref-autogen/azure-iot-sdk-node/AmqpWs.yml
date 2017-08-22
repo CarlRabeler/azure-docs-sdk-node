@@ -1,0 +1,23 @@
+### YamlMime:UniversalReference
+items:
+  - uid: 'module:azure-iothub.AmqpWs'
+    id: 'module:azure-iothub.AmqpWs'
+    name: AmqpWs
+    summary: "Constructs an <code><xref:Amqp></code> object that can be used in an application\r             to connect to IoT Hub instance, using the AMQP protocol over secure websockets.\r             This class overloads the constructor of the base <xref:module%3Aazure-iothub--amqp%3AAmqp> class from the AMQP transport, and inherits all methods from it."
+    fullName: AmqpWs
+    type: Class
+    children:
+      - 'module:azure-iothub.AmqpWs.#ctor'
+    langs:
+      - js
+  - id: 'module:azure-iothub.AmqpWs.#ctor'
+    uid: 'module:azure-iothub.AmqpWs.#ctor'
+    parent: 'module:azure-iothub.AmqpWs'
+    name: AmqpWs()
+    fullName: AmqpWs.AmqpWs()
+    summary: ''
+    type: Constructor
+    syntax:
+      content: new AmqpWs()
+    langs:
+      - js
