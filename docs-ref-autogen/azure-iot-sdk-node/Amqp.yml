@@ -19,12 +19,25 @@ items:
   - id: 'module:azure-iothub.Amqp.#ctor'
     uid: 'module:azure-iothub.Amqp.#ctor'
     parent: 'module:azure-iothub.Amqp'
-    name: Amqp()
-    fullName: Amqp.Amqp()
+    name: 'Amqp(config, amqpBase)'
+    fullName: 'Amqp.Amqp(config, amqpBase)'
     summary: ''
     type: Constructor
     syntax:
-      content: new Amqp()
+      parameters:
+        - id: config
+          type:
+            - Object
+          description: >-
+            The configuration object that should be used to connect to the IoT
+            Hub service.
+        - id: amqpBase
+          type:
+            - Object
+          description: >-
+            OPTIONAL: The Base AMQP transport object. Amqp will use
+            azure-iot-common.Amqp if no argument is provided.
+      content: 'new Amqp(config, amqpBase)'
     langs:
       - js
   - uid: 'module:azure-iothub.Amqp#connect'

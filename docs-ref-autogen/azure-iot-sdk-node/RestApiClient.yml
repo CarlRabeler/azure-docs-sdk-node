@@ -18,12 +18,25 @@ items:
   - id: 'module:azure-iothub.RestApiClient.#ctor'
     uid: 'module:azure-iothub.RestApiClient.#ctor'
     parent: 'module:azure-iothub.RestApiClient'
-    name: RestApiClient()
-    fullName: RestApiClient.RestApiClient()
+    name: 'RestApiClient(config, httpRequestBuilder)'
+    fullName: 'RestApiClient.RestApiClient(config, httpRequestBuilder)'
     summary: ''
     type: Constructor
     syntax:
-      content: new RestApiClient()
+      parameters:
+        - id: config
+          type:
+            - Object
+          description: >-
+            The configuration object that should be used to connect to the IoT
+            Hub service.
+        - id: httpRequestBuilder
+          type:
+            - Object
+          description: >-
+            OPTIONAL: The base http transport object. `azure-iot-common.Http`
+            will be used if no argument is provided.
+      content: 'new RestApiClient(config, httpRequestBuilder)'
     langs:
       - js
   - uid: 'module:azure-iothub.RestApiClient.executeApiCall'
