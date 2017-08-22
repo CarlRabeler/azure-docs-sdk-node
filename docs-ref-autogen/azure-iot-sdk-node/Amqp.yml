@@ -5,23 +5,6 @@ items:
     name: Amqp
     summary: "Constructs an <code><xref:Amqp></code> object that can be used in an application\r             to connect to IoT Hub instance, using the AMQP protocol."
     fullName: Amqp
-    tags:
-      - originalTitle: params
-        title: params
-        text: >-
-          {Object}  config    The configuration object that should be used to
-          connect to the IoT Hub service.
-        value: >-
-          {Object}  config    The configuration object that should be used to
-          connect to the IoT Hub service.
-      - originalTitle: params
-        title: params
-        text: >-
-          {Object}  amqpBase  OPTIONAL: The Base AMQP transport object. Amqp
-          will use azure-iot-common.Amqp if no argument is provided.
-        value: >-
-          {Object}  amqpBase  OPTIONAL: The Base AMQP transport object. Amqp
-          will use azure-iot-common.Amqp if no argument is provided.
     type: Class
     children:
       - 'module:azure-iothub.Amqp.#ctor'

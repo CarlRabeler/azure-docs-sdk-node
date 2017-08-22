@@ -7,25 +7,6 @@ items:
       Constructs an <code><xref:RestApiClient></code> object that can be used to
       make REST calls to the IoT Hub service.
     fullName: RestApiClient
-    tags:
-      - originalTitle: params
-        title: params
-        text: >-
-          {Object}  config              The configuration object that should be
-          used to connect to the IoT Hub service.
-        value: >-
-          {Object}  config              The configuration object that should be
-          used to connect to the IoT Hub service.
-      - originalTitle: params
-        title: params
-        text: >-
-          {Object}  httpRequestBuilder  OPTIONAL: The base http transport
-          object. `azure-iot-common.Http` will be used if no argument is
-          provided.
-        value: >-
-          {Object}  httpRequestBuilder  OPTIONAL: The base http transport
-          object. `azure-iot-common.Http` will be used if no argument is
-          provided.
     type: Class
     children:
       - 'module:azure-iothub.RestApiClient.#ctor'
